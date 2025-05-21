@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@keyframes slidein {
+  0% {
+    position: relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px ;
+  }
+
+  100% {
+    width: 8%;
+    cursor: pointer;
+    border-color: #E2636D;
+  }
+}
+
+
+header {
+    background: linear-gradient(90deg,rgba(226, 99, 109, 1) 30%, rgba(229, 208, 25, 1) 80%);
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+#l1{
+    position: relative;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px ;
+}
+
+#l1:hover{
+    /* width: 8%; */
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+    animation-name: slidein;
+    /* cursor: pointer;
+    border-color: #E2636D; */
+}
+
+body {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg,rgba(226, 99, 109, 1) 30%, rgba(229, 208, 25, 1) 80%);
+    color: black;
+}
+
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.controls {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Для переноса на маленьких экранах */
+}
+
+.controls input[type="text"],
+.controls select {
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    flex-grow: 1; /* Позволяет элементам управления растягиваться */
+    min-width: 200px; /* Минимальная ширина для элементов управления */
+}
+
+.controls input[type="text"] {
+    flex-basis: 300px; /* Базовая ширина для поля поиска */
+}
+.controls select {
+     flex-basis: 250px; /* Базовая ширина для фильтра */
+}
+
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Адаптивные колонки */
+    gap: 25px;
+}
+
+.exercise-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.exercise-card img {
+    max-width: 100%;
+    height: 300px;
+
+    object-fit: contain;
+    display: block; /* Убирает лишний отступ под изображением */
+}
+
+.exercise-card .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.75rem;
+    color: black; /* Темнее синий для заголовков карточек */
+}
+
+.exercise-card .muscles {
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.exercise-card .muscles strong {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.exercise-card .description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+
+
+.exercise-card .details-link:hover {
+    background-color: #E2636D;
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #343a40;
+    color: #f8f9fa;
+    margin-top: 40px;
+}
+
+/* Для JavaScript (скрытие карточек) */
+.hidden {
+    display: none !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .exercise-grid {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch; /* Элементы управления растягиваются на всю ширину */
+    }
+    .controls input[type="text"],
+    .controls select {
+        width: 100%; /* Занимают всю ширину в мобильной версии */
+        flex-basis: auto;
+        margin-bottom: 10px; /* Отступ между элементами управления в колонке */
+    }
+    .controls select:last-child {
+        margin-bottom: 0;
+    }
+}

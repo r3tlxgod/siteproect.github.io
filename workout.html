@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База упражнений</title>
+    <link rel="stylesheet" href="/css/workout.css">
+    <script src="/scripts/workout.js"></script>
+</head>
+<body>
+    <header><a href="/main.html"><img src="jpg/logo.png" width="100" id="l1"/></a></header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Поиск по названию...">
+            <select id="muscleGroupFilter">
+                <option value="all">Все группы мышц</option>
+                <option value="chest">Грудь</option>
+                <option value="back">Спина</option>
+                <option value="legs">Ноги</option>
+                <option value="shoulders">Плечи</option>
+                <option value="arms">Руки (бицепс, трицепс)</option>
+                <option value="abs">Пресс</option>
+                <option value="core">Кор</option>
+                <option value="glutes">Ягодицы</option>
+            </select>
+        </div>
+
+        <div class="exercise-grid">
+            <!-- Карточка 1: Приседания -->
+            <div class="exercise-card" data-name="Приседания со штангой" data-muscles="legs,glutes">
+                <img src="jpg/artworks-R1cdhqotgMWRErbB-nWLA0w-t500x500.jpg">
+                <div class="card-content">
+                    <h2>Приседания со штангой</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Квадрицепсы, ягодицы, бицепс бедра.</p>
+                    <p class="description">
+                        Положите штангу на верхнюю часть трапеций. Ноги на ширине плеч, носки слегка разведены. Медленно опускайтесь, отводя таз назад, до параллели бедер с полом или ниже. Спина прямая. Мощно вернитесь в исходное положение.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 2: Жим лежа -->
+            <div class="exercise-card" data-name="Жим штанги лежа" data-muscles="chest,shoulders,arms">
+                <img src="jpg/scale_1200.png" alt="Жим лежа">
+                <div class="card-content">
+                    <h2>Жим штанги лежа</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Грудные, трицепсы, передние дельты.</p>
+                    <p class="description">
+                        Лягте на скамью, возьмитесь за гриф хватом чуть шире плеч. Плавно опустите штангу до касания середины груди. Мощно выжмите штангу вверх.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 3: Подтягивания -->
+            <div class="exercise-card" data-name="Подтягивания на перекладине" data-muscles="back,arms">
+                <img src="jpg/1.png" alt="Подтягивания">
+                <div class="card-content">
+                    <h2>Подтягивания</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Широчайшие мышцы спины, бицепсы, предплечья.</p>
+                    <p class="description">
+                        Возьмитесь за перекладину хватом чуть шире плеч. Подтянитесь, стараясь коснуться перекладины верхней частью груди или подбородком. Плавно опуститесь.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 4: Отжимания от пола -->
+            <div class="exercise-card" data-name="Отжимания от пола" data-muscles="chest,shoulders,arms,core">
+                <img src="jpg/2.png" alt="Отжимания от пола">
+                <div class="card-content">
+                    <h2>Отжимания от пола</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Грудные, трицепсы, передние дельты, мышцы кора.</p>
+                    <p class="description">
+                        Примите упор лежа, руки чуть шире плеч. Тело образует прямую линию от головы до пяток. Согните руки в локтях, опускаясь как можно ниже. Мощно отожмитесь в исходное положение.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 5: Планка -->
+            <div class="exercise-card" data-name="Планка" data-muscles="core,abs">
+                <img src="jpg/3.png" alt="Планка">
+                <div class="card-content">
+                    <h2>Планка</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Мышцы кора (пресс, спина).</p>
+                    <p class="description">
+                        Примите упор лежа на предплечьях (или на прямых руках). Тело от макушки до пяток должно составлять прямую линию. Напрягите пресс и ягодицы. Удерживайте положение.
+                    </p>
+                    
+                </div>
+            </div>
+
+             <!-- Карточка 6: Становая тяга -->
+            <div class="exercise-card" data-name="Становая тяга" data-muscles="back,legs,glutes,core">
+                <img src="jpg/4.png" alt="Становая тяга">
+                <div class="card-content">
+                    <h2>Становая тяга</h2>
+                    <p class="muscles"><strong>Целевые мышцы:</strong> Мышцы спины, ноги, ягодицы, кор.</p>
+                    <p class="description">
+                        Подойдите к штанге, стопы под грифом. Наклонитесь, сохраняя спину прямой, возьмитесь за гриф. Мощным усилием ног и спины поднимите штангу, полностью выпрямляясь. Плавно опустите.
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- Добавьте сюда больше карточек упражнений по аналогии -->
+
+        </div>
+    </main>
+    <script src="workout.js"></script>
+</body>
+</html>
