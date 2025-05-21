@@ -126,3 +126,15 @@ hr {
     background-color: black;
     margin: 20px 0;
 }
+/* Адаптивность для небольших экранов */
+@media (max-width: 768px) {
+    header {
+        font-size: 2rem;
+    }
+    .meal-section h2 {
+        font-size: 1.8rem;
+    }
+    .recipe-card h3 {
+        font-size: 1.3rem;
+    }
+}
